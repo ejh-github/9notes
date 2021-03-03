@@ -1,0 +1,13 @@
+mkdir -p /sys/lib/go
+cd /sys/lib/go
+hget https://golang.org/dl/go1.15.5.src.tar.gz | gunzip -c | tar x
+mv go amd64-1.15.5
+hget http://www.9legacy.org/download/go/go1.14.1-plan9-amd64-bootstrap.tbz | bunzip2 -c | tar x
+GOROOT_BOOTSTRAP=/sys/lib/go/go-plan9-amd64-bootstrap
+GOROOT=/sys/lib/go/amd64-1.15.5
+cd amd64-1.15.5/src
+make.rc
+cp $GOROOT/bin/* /$objtype/bin
+bind -b $GOROOT/bin /bin
+$GOROOT_FINAL/bin/go env
+go version
