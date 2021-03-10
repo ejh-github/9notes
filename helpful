@@ -1,1 +1,3 @@
 git/compat to use git9 with go
+
+certificates for 9front https://curl.se/docs/caextract.html
