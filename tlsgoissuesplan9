@@ -1,0 +1,5 @@
+https://www.mail-archive.com/9fans@9fans.net/msg39066.html
+
+solution:
+
+hget https://curl.se/ca/cacert-2021-01-19.pem >/sys/lib/tls/ca.pem
