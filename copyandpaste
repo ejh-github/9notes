@@ -51,5 +51,3 @@ SSH Setup
 auth/rsagen -t 'service=ssh' >$home/lib/sshkey
 auth/rsa2ssh $home/lib/sshkey >$home/lib/sshkey.pub
 cat $home/lib/sshkey >/mnt/factotum/ctl
-.LP
-cd /usr/git/glenda
