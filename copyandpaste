@@ -1,0 +1,55 @@
+Update System
+sysupdate
+cd /sys/src
+mk install
+mk clean
+reboot
+
+Installing Git9
+cd /tmp
+hget https://orib.dev/git/git9/HEAD/snap.tar.gz | tar xvz
+cd git9
+mk all
+mk install
+mkdir $home/src
+git/clone gits://orib.dev/git9
+cd git9
+mk all
+mk install
+mkdir -p $home/lib/git
+mkdir -p $home/lib/git
+echo '
+[user]
+name=Elias Howell
+email=mailbox.ejh@gmail.com
+\' > $home/lib/git/config
+
+Installing Netsurf
+mkdir $home/src
+cd $home/src
+git/clone git://github.com/netsurf-plan9/nsport
+cd nsport
+fetch clone git
+cd nsport
+mk
+mk install
+
+Installing OpenBSD In VMX
+hget https://cdn.openbsd.org/pub/OpenBSD/6.4/amd64/install64.fs >install64.fs
+hget https://cdn.openbsd.org/pub/OpenBSD/6.4/amd64/bsd >bsd
+hget https://cdn.openbsd.org/pub/OpenBSD/6.4/amd64/bsd.rd >bsd.rd
+mkdir -p vmx/vm
+dd </dev/zero -of vmx/vm/openbsd -bs 1 -count 1 -seek `{echo '20*1024*1024*1024-1' | pc -n}
+chmod +t vmx/vm/openbsd
+vmx -M 3G -n ether0 -d vmx/vm/openbsd -d install64.fs -v vesa:1920x1080 bsd.rd
+vmx -M 3G -n ether0 -d vmx/vm/openbsd -v vesa:1920x1080 bsd 'device=sd0a'
+
+Fix Time
+aux/timesync -r
+
+SSH Setup
+auth/rsagen -t 'service=ssh' >$home/lib/sshkey
+auth/rsa2ssh $home/lib/sshkey >$home/lib/sshkey.pub
+cat $home/lib/sshkey >/mnt/factotum/ctl
+.LP
+cd /usr/git/glenda
