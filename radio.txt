@@ -1,0 +1,3 @@
+play http://cyberadio.pw:8000/stream
+play http://early1900s.org/radiodismuke/radiodismuke.ram
+
