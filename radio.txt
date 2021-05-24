@@ -1,3 +1,28 @@
+# Music
+
+# grateful dead radio
+play http://208.85.242.52:8162/listen.pls
+
+# /g/punk cyber radio
 play http://cyberadio.pw:8000/stream
+
+# radio dismuke
 play http://early1900s.org/radiodismuke/radiodismuke.ram
+
+# plaza.one vaporwave radio
+play http://radio.plaza.one/ogg
+
+# ancient faith orthodox christian radio
+play https://ancientfaith.streamguys1.com/mp3music
+
+# lainchan
+play https://lainon.life/radio/cyberia.ogg.m3u
+
+# kexp
+play http://live-mp3-128.kexp.org/kexp128-backup.mp3.m3u
+
+# fluxwave
+play http://80.78.23.109:8000/listen.mp3
+
+# Talk Radio
 
