@@ -24,5 +24,8 @@ play http://live-mp3-128.kexp.org/kexp128-backup.mp3.m3u
 # fluxwave
 play http://80.78.23.109:8000/listen.mp3
 
-# Talk Radio
+# Talk
+
+# New Hampshire Public Radio
+play https://nhpr.streamguys1.com/nhpr
 
