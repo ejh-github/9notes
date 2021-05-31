@@ -1,3 +1,15 @@
 git/compat to use git9 with go
 
 certificates for 9front https://curl.se/docs/caextract.html
+
+# hpcc
+
+editing .ssh/config and adding
+
+Host github.com
+User git
+Port 22
+Hostname github.com
+IdentityFile ~/.ssh/id_rsa
+TCPKeepAlive yes
+IdentitiesOnly yes
