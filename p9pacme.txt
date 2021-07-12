@@ -1,0 +1,4 @@
+in .bashrc
+
+# My aliases
+alias acme="acme -f /usr/lib/plan9/font/luc/unicode.18.font"
